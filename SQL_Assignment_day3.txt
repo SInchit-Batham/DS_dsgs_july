@@ -1,0 +1,41 @@
+1. select categories, count(book_no) from books group by categories;
+
+2. select book_no, count(issued_date) as total from books group by book_no order by total desc;
+
+3. select max(penality_amount), min( penality_amount), sum(penality_amount) as total, avg(penality_amount);
+
+4. select member_id, count(book_id) as total from books, members group by member_id having total > 2
+
+5 select member_id, b.book_no , count(i.book_no) as total from books b inner join issue i on b.member_id=i.member_id order by total desc;
+
+6 select book_no from members m inner join books b on b.books=m.member_id
+
+
+ 19 select member_id,member_name from member m inner join issue i on m.member_id = i.member_id where in ( select book_name from books where member_name= "Garima";
+
+20 select book_name, cost from member m inner join issue i on m.member_id = i.member_id where datediff(returned_date, issued_date)>;30;                 21
+
+select authors, book_name, from books group by authors, book_name having count(book_name)>;                                                            
+
+select member_id,member_name, max(count(i.member_id)), min(count(i.member_id)) from member m inner join issue i on m.member_id = i.member_id;
+
+
+select * from books order by cost desc limit 3;
+
+26 select count(book_no) from members m inner join issue i on m.member_id=i.member_id where membership_type= "lifetime;
+
+27 select membership_type , count(member_id) from members group by membership_type;  
+
+28 select member_name from members m inner join issue i on m.member_id=i.memeber_id order by book_no desc limit 5;
+ select sum(cost) from books b inner join issue i on b.book_no=i.book_no where issued_date is not null and return_date is null;
+
+select *  from books b inner join issue i on b.book_no=i.book_no where issue_date is null;
+
+29 select
+
+30 select member_name from members order by acc_open_date limit 3;
+
+31 select member_name, membership_type from members m inner join issue i on m.member_id=i.member_id where month(issue_date) between '12' and '12';
+
+32 select member_name from members m inner join issue i on m.member_id= i_memeber_id where issue_date is not null and return_date is null;
+
