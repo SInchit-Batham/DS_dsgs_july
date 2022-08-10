@@ -1,56 +1,60 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title>LTI - Larsen & Toubro Infotech</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 </head>
+
+<style>
+body {
+  background-image: url('C:\\Users\\SBM6\\Documents\\Airline\\a.jpg');
+
+
+  }
+  p{ alignment : "center";
+      margin-top : 70px;
+  }
+  
+
+     
+</style>
+
+
 <body>
-    <div class="header">
-      <h1>Welcome to LTI</h1>    
-    </div>
-      
-    <div class="topnav">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><img src="images/lti.jpg" style="float: right; padding-right: 20px; height:50px"></li>
-        </ul>
-      </div>
-      
-      <div class="row">
-        <div class="main">
-          <div class="card">
-            <h2 style="text-align: center;">Login to a world of opportunities!</h2>
-            <form>
-              
-                <div class="container">
-                  <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname">
-              
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw">
-              
-                  <button type="submit">Login</button>
-                  <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                  </label>
-                </div>
-              
-                <div class="container" style="background-color:#f1f1f1">
-                  <button type="button" class="cancelbtn">Cancel</button>
-                  <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-              </form>
-          </div>
-        </div>
-      </div>
-      
-      
-      <div class="footer">
-        <p>© 2020 Larsen & Toubro Infotech Limited</p>
-      </div>          
+<div align="center">
+<h1>AirLine Reservation System</h1>
+<hr>
+<p><h2>Login Here</h2></p>
+<form action="UserDashBoard.html">
+     <table>
+          <tr>
+              <td  style="color:ORANGE;">Enter Username</td>
+              <td>
+                   <input type="text" id="username" name="username" placeholder="USERNAME">
+              </td>
+          </tr>
+          
+          <tr>
+              <td  style="color:ORANGE;">Enter Password</td>
+              <td>
+                   <input type="password" id="password" name="password" placeholder="PASSWORD">
+              </td>
+          </tr>
+          
+          <tr>
+              <td  style="color: BLUE;" colspan="2"> <input type="submit" name="submit" placeholder="SUBMIT"></td>
+          </tr>
+          
+          <tr>
+              <td colspan="2"> Not a member yet? <a href="Register.html"> Register</a></td>
+          </tr>
+          
+          <tr>
+              <td colspan="2"> Forget Password? <a href="ForgetPassword.html"> Forget Password</a></td>
+          </tr>
+          <tr>
+              <td colspan="2"> <span>Reset Password? <a href="ResetPassword.html"> Reset</a></span></td>
+          </tr>
+     </table>
+</form>
+</div>
 </body>
 </html>

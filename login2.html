@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+
+<script>
+function validate()
+{
+	var username=document.getElementById("uname").value;
+	
+	if(username=="")
+	{
+		document.getElementById("userErr").innerHTML='username cannot be blank';
+		return false;
+	}
+
+	var password=document.getElementById("upass").value;
+	if(password=="")
+	{
+		document.getElementById("passErr").innerHTML='password cannot be blank';
+		return false;
+	}
+  	return true;
+}
+	function clearUserErr()
+	{
+		document.getElementById("userErr").innerHTML="";
+	
+	}
+	function clearPassErr()
+	{
+		document.getElementById("passErr").innerHTML="";
+	}
+		
+
+
+</script>
+
+<body>
+<form action="searchFlights.html">
+Enter username <input type=text id="uname" onKeyUp="clearUserErr()">
+<span id="userErr"></span> <br>
+Enter password <input type=password id="upass" onKeyUp="clearPassErr()">
+<span id="passErr"></span><br>
+Enter username<input type=submit name=submit value="Login" onCLick ="return validate()"><br>
+</form>
+</body>
+</html>

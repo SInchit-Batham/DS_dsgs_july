@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Email and Password Validation Page</title>
+<script type="text/javascript">
+
+var username;
+var password;
+
+
+function userData(){
+     username=document.getElementById("uname").value;
+     password=document.getElementById("pass").value;
+     confirmpass=document.getElementById("confirmpass").value;
+}
+function validation(){
+     userData();
+     if(username==""){
+          document.getElementById("userErr").innerHTML="User Name Cannot be blank.";
+          return false;
+     }
+     if(password==""){
+          document.getElementById("passErr").innerHTML="Password cannot be blank.";
+          return false;
+     }
+     if(confirmpass==""){
+          document.getElementById("confirmpassErr").innerHTML="Re Password cannot be blank.";
+          return false;
+     }
+     if(password.length<8){
+          alert("Password Should be of length 8 characters including 1 Upper case alphabet, lower case alphabet and atleast one special character ");
+          return false;
+     }
+     if(password!=confimpass){
+          alert("Password and Confirm-Password must be same.")
+          return false;
+     }
+     validateEmail(username);
+     return true;
+}
+function validateEmail(email){
+     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+       if (email.value.match(validRegex)) {
+
+         alert("Valid email address.");
+
+       } else {
+
+         alert("Invalid email address.");
+  
+
+       }
+}
+function checkUserErr(){
+     document.getElementById("userErr").innerHTML="";
+}
+function checkPassErr(){
+     document.getElementById("passErr").innerHTML="";
+}
+function checkconfirmPassErr(){
+     document.getElementById("confirmpassErr").innerHTML="";
+}
+</script>
+</head>
+<body>
+Enter Username <input name="uname" type="email" id="uname" onKeyUp="checkUserErr()" >
+<span id="userErr" class="cred" style="color: red;"></span><br>
+Enter Password <input name="pass" type="password" id="pass" onKeyUp="checkPassErr()" >
+<span id="passErr" class="cred" style="color: red;"></span><br>
+Re-Enter Password <input name="confirmpass" type="password" id="confirmpass" onKeyUp="checkconmfirmPassErr()" >
+<span id="confirmpassErr" class="cred" style="color: red;"></span><br>
+<input type="submit" value="Login" onClick="validation()"> 
+</form>
+</body>
+</html>

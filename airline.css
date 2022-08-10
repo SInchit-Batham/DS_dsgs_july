@@ -1,0 +1,29 @@
+
+
+
+body{
+	background-image: url('C:\\Users\\SBM6\\Documents\\Airline\\aeroplane.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1{
+	color:blue; text-align: center;
+}
+h2{
+	color: red; text-align: center;
+}
+table{
+	margin-left: auto;
+	margin-right: auto;;
+	background-color: #FFFFE0;
+}
+tr{
+	background-color: #ffffff;
+}
+th{
+	background-color: #10cdb9;
+}
+a{
+	text-align: center;
+} 
+ 
