@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #966F33 ;
+}
+li ul { display: none; }
+
+ul li a {
+  display: block;
+  padding: 1.7em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul li a:hover { background: Grey; }
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+li:hover a { background: #966F33; }
+
+li:hover li a:hover { background: orange; }
+
+.states li ul li { border-top: 0; }
+ul ul ul {
+  left: 74.9%;
+  top: 0;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<ul class="states">
+  
+  <li><a href="#">INDIAN STATES</a>
+    <ul>
+      <li><a href="#">Maharashtra</a>
+      <ul>
+          <li><a href="#">Nagpur</a></li>
+          <li><a href="#">Solapur</a></li>
+          <li><a href="#">Aurangabad</a></li>
+          <li><a href="#">Pune</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Tamil Nadu</a>
+        <ul>
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Madurai</a></li>
+          <li><a href="#">Tiruchirappalli</a></li>
+          <li><a href="#">Vellore</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Gujrat</a>
+       <ul>
+          <li><a href="#">Ahmedabad</a></li>
+          <li><a href="#">Surat</a></li>
+          <li><a href="#">Porbandar</a></li>
+          <li><a href="#">Godhra</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+</body>
+</html>
